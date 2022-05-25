@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Esquina NorOeste</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/css/index.css">
+</head>
+<body>
+    <main>
+        <h1 class="Titulo">Calculadora de transporte Esquina NorOeste</h1>
+        <div class="generar">
+            <!--Ingreso de Filas y Columnas -->
+            <div class="generar-espacio">
+                <span class="generar-span">Filas</span>
+                <input class="input generar-input" type="text">
+            </div>
+            <div class="generar-espacio">
+                <span class="generar-span">Columnas</span>
+                <input class="input generar-input" type="text">
+            </div>
+            <button class="btn btn--generar">Generar Tabla</button>
+            <button class="btn btn--reset" disabled>
+                <i class="bi bi-arrow-clockwise"></i>
+            </button>
+        </div>
+        <div class="container">
+            <div class="matriz">
+                <!-- Contendra todo los inputs generador por javascript-->
+            </div>
+        </div>
+        <div class="resultado">
+        </div>
+        <button class="btn btn--calcular" disabled>Calcular</button>
+    </main>
+    <script src="/js/app.js" type="module"></script>
+</body>
+</html>
