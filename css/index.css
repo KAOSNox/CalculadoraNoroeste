@@ -61,6 +61,7 @@ main{
 
 
 .input{
+    text-align: center;
     height: 50%;
     padding-left: 5%;
     border: none;
@@ -152,6 +153,7 @@ input::placeholder{
 .matriz__input{
     width: 90%;
     height: 5vh;
+    text-align: center;
     border: none;
     outline: #000 2px solid;
     background-color: #00b2e9;
