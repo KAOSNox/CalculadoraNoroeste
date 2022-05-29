@@ -170,7 +170,19 @@ input::placeholder{
     color: #b3ff00;
 }
 
+footer{
+    display: flex;
+    width: 90%;
+    padding: 0.5% 10%;
+    background-color: #F8C822;
+    position: fixed;
+    bottom: 0;
+}
 
+footer ul li{
+    font-size: clamp(0.5rem, 1vw, 10vw);
+    list-style: none;
+}
 
 @media (hover: hover) {
     button:hover {

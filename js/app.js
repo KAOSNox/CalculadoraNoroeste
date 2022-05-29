@@ -83,6 +83,7 @@ btnReset.onclick = function(){
     html.enableBtn(btnGenerar);
     html.disableBtn(btnReset);
     html.disableBtn(btnCalcular);
+    resultado.innerHTML = ``;
 }
 
 //Evento al darle click al boton de calcular
@@ -94,6 +95,7 @@ btnCalcular.onclick = function(){
 }
 
 function verificarValores(){
+    let errorCeldaVacia = false;
     let sumaFilas = 0;
     let sumaColumna = 0;
     //Suma todos los datos de demanda
@@ -108,14 +110,19 @@ function verificarValores(){
     for(let i=0; i<filas; i++){
         for(let j=0; j<columnas; j++){
             if(InputsArray[i][j].value === "" && i+j != (filas + columnas - 2)){
-                alert("Celda Vacia")
-                break;
+                if(errorCeldaVacia == false){
+                    alert("Celda Vacia")
+                    errorCeldaVacia = true;
+                    return false;
+                    break;
+                }
             }
         }
     }
     //Verifica que la demanda sea igual al suministro disponible
     if(sumaFilas != sumaColumna){
-        alert("La suma de la demanda es diferente a la del suministro");
+        alert("La cantidad de demanda es diferente al suministro disponible");
+        return false;
     }
 
     return true;
